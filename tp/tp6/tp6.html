@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP6 - Table</title>
+    <title>TP6 - Tables</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -50,11 +50,34 @@
         .zone-c {
             background-color: #c2e0c6; /* Couleur pour la Zone C */
         }
+        .logo {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+        .reference-link {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+        .info-bulle {
+            position: relative;
+        }
+        .info-bulle:hover::after {
+            content: attr(data-info);
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 5px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
 
-<table>
+<h2>Tableau 1: Vacances Scolaires</h2>
+<table class="tableau1">
   <tr>
     <th>Vacances</th>
     <th class="zone-a">Zone A</th>
@@ -100,6 +123,27 @@
     <td class="zone-c">Créteil, Montpellier, Paris, Toulouse, Versailles</td>
   </tr>
 </table>
-      
+
+<h2>Tableau 2: Langages de Script Côté Serveur</h2>
+<table class="tableau2">
+    <tr>
+        <th>Logo</th>
+        <th>Nom abrégé</th>
+        <th>Nom complet</th>
+        <th>Année de sortie</th>
+        <th>Site web de référence</th>
+        <th>Exemple de code</th>
+    </tr>
+    <tr>
+        <td class="logo info-bulle" data-info="Clique sur le logo affiche une autre page avec sa taille d'origine." onclick="alert('Clique sur le logo affiche une autre page avec sa taille d\'origine.')">Php</td>
+        <td>Php</td>
+        <td>...</td>
+        <td>...</td>
+        <td class="reference-link" onclick="window.open('https://www.php.net', '_blank')">...</td>
+        <td><code>&lt;?php echo 'Hello, World!'; ?&gt;</code></td>
+    </tr>
+    <!-- Ajoute d'autres lignes pour les autres langages ici -->
+</table>
+
 </body>
 </html>
