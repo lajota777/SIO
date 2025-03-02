@@ -11,40 +11,31 @@
         }
         .container {
             display: flex;
-            height: 100vh;
+            height: 90vh;
         }
-        .zone {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2em;
-        }
-        .zone-haut {
-            background-color: red;
-        }
-        .zone-gauche {
+
+        .sidebar {
+            width: 20%;
             background-color: blue;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
+            color: black;
+            padding: 10px;
+            font-weight: bold;
         }
-        .zone-milieu {
+
+        .content {
+            flex: 1;
             background-color: green;
+            color: black;
+            padding: 10px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
+    <div class="header">Zone du Haut</div>
     <div class="container">
-        <div class="zone zone-haut">
-            Zone du Haut
-        </div>
-        <div class="zone zone-gauche">
-            Zone de Gauche
-        </div>
-        <div class="zone zone-milieu">
-            Zone du Milieu
-        </div>
+        <div class="sidebar">Zone de Gauche</div>
+        <div class="content">Zone du Milieu</div>
     </div>
 
 </body>
