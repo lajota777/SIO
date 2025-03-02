@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zones de Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: auto 1fr auto;
+            width: 80%;
+            height: 80%;
+            border: 2px solid #ccc;
+        }
+        .zone-haut {
+            grid-column: 1 / 6;
+            background-color: #ff6347; /* Tomato color */
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        .zone-gauche {
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+            background-color: #4682b4; /* SteelBlue color */
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        .zone-droite {
+            grid-row: 2 / 3;
+            grid-column: 5 / 6;
+            background-color: #4682b4; /* SteelBlue color */
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        .zone-bas {
+            grid-column: 1 / 6;
+            background-color: #ffd700; /* Gold color */
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        .zone-centrale {
+            grid-row: 2 / 3;
+            grid-column: 2 / 5;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+        .zone-centrale div {
+            background-color: #3cb371; /* MediumSeaGreen color */
+            text-align: center;
+            padding: 50px;
+            color: white;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="zone-haut">Zone du Haut</div>
+    <div class="zone-gauche">Zone de Gauche</div>
+    <div class="zone-droite">Zone de Droite</div>
+    <div class="zone-bas">Zone du Bas</div>
+    <div class="zone-centrale">
+        <div>Z1</div>
+        <div>Z2</div>
+        <div>Z3</div>
+        <div>Z4</div>
+        <div>Z5</div>
+    </div>
+</div>
+
+</body>
+</html>

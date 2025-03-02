@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mise en Page Colorée</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .haut, .bas, .menu {
+            background-color: #a8e6cf; /* Couleur turquoise */
+            padding: 10px;
+            text-align: center;
+        }
+        .menu {
+            background-color: #ff69b4; /* Couleur rose */
+        }
+        .contenu {
+            display: flex;
+            height: calc(100% - 140px); /* Ajuste la hauteur en fonction des autres sections */
+        }
+        .gauche {
+            width: 30%;
+            background: linear-gradient(to bottom, #a8e6cf 50%, #d3d3d3 50%); /* Dégradé turquoise à gris */
+        }
+        .droite {
+            width: 70%;
+            background: linear-gradient(to bottom, #ffd700, #1e90ff); /* Dégradé jaune à bleu */
+        }
+    </style>
+</head>
+<body>
+
+<div class="haut">
+    Haut
+</div>
+
+<div class="menu">
+    Menu
+</div>
+
+<div class="contenu">
+    <div class="gauche">
+        Gauche
+    </div>
+    <div class="droite">
+        Droite
+    </div>
+</div>
+
+<div class="bas">
+    Bas
+</div>
+
+</body>
+</html>
