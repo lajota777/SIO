@@ -13,40 +13,30 @@
             display: flex;
             height: 100vh;
         }
-        .zone {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2em;
+        .div-centre1et2 {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 90vh;
         }
-        .zone-haut {
-            background-color: red;
+        .milieu1et2 {
+        position: relative;
+        flex: 1;
+        background-color: #55d87b;
         }
-        .zone-gauche {
-            background-color: blue;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-        }
-        .zone-milieu {
-            background-color: green;
-        }
+
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="zone zone-gauche">
-        Zone de Gauche
+    <div class="div-centre1et2">
+        <section class="gauche1et2">
+            <p class="margin-p1et2">Zone de Gauche</p>
+        </section>
+        <section class="milieu1et2">
+            <p class="margin-p1et2">Zone du Milieu</p>
+        </section>
     </div>
-    <div class="zone zone-milieu">
-        Zone du Milieu
-    </div>
-</div>
-<div class="zone zone-haut">
-    Zone du Haut
-</div>
 
 </body>
 </html>
