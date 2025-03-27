@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul de Devis Béton</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calcul de Devis Béton</h1>
+        <form id="betonForm">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse" required>
+
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="longueur">Longueur (m) :</label>
+            <input type="number" id="longueur" name="longueur" required>
+
+            <label for="largeur">Largeur (m) :</label>
+            <input type="number" id="largeur" name="largeur" required>
+
+            <label for="epaisseur">Épaisseur (cm) :</label>
+            <input type="number" id="epaisseur" name="epaisseur" min="15" max="35" required>
+
+            <button type="button" onclick="calculerDevis()">Obtenir le Devis</button>
+        </form>
+    </div>
+
+    <div id="devis" class="hidden devis">
+        <div class="header">
+            <h1>DEVIS</h1>
+            <p>Date du devis : <span id="dateDevis"></span></p>
+        </div>
+        <div class="client">
+            <div>
+                <strong id="nomClient"></strong><br>
+                <span id="adresseClient"></span><br>
+                <span id="telephoneClient"></span><br>
+                <span id="emailClient"></span>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>DESCRIPTION</th>
+                    <th>QUANTITÉ</th>
+                    <th>PRIX UNITAIRE HT</th>
+                    <th>TOTAL HT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Béton</td>
+                    <td id="volumeBeton">0</td>
+                    <td>91€</td>
+                    <td id="totalBeton">0€</td>
+                </tr>
+                <tr>
+                    <td>Transport</td>
+                    <td id="nbCamions">0</td>
+                    <td>140€</td>
+                    <td id="totalTransport">0€</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total">
+            <span class="sous-total">Sous total: <span id="sousTotal">0€</span></span>
+            <span class="tva">TVA (20%): <span id="tva">0€</span></span>
+            <span class="total">TOTAL: <span id="totalTTC">0€</span></span>
+        </div>
+        <div class="conditions">
+            <p>Termes et conditions</p>
+            <p>Insérez ici les termes et conditions spécifiques.</p>
+        </div>
+        <div class="signature">
+            <p>Signature du client ______________________</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

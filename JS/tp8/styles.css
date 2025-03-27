@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    color: #555;
+    text-align: left;
+}
+
+input {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    display: none;
+}
+
+.devis {
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header, .footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #5a5a5a;
+}
+
+.header p {
+    font-size: 0.8em;
+    color: #5a5a5a;
+}
+
+.client, .attention {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.client div, .attention div {
+    width: 50%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #f9f9f9;
+}
+
+.total {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.total .sous-total, .total .tva, .total .total {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.conditions {
+    font-size: 0.8em;
+    color: #5a5a5a;
+}
+
+.signature {
+    margin-top: 20px;
+    text-align: right;
+}
