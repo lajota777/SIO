@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Visite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulaire de Visite</h1>
+        <form id="visitForm">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="etudes">Études suivies :</label>
+            <select id="etudes" name="etudes" required>
+                <option value="Bac pro">Bac pro</option>
+                <option value="STI">STI</option>
+                <option value="STMG">STMG</option>
+                <option value="Général">Général</option>
+            </select>
+
+            <button type="submit">Valider</button>
+        </form>
+
+        <h2>Liste des Visiteurs</h2>
+        <table id="visitorTable">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Études</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Les lignes seront ajoutées ici par JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendrier Paramétrable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calendrier Paramétrable</h1>
+        <form id="calendarForm">
+            <label for="firstDay">Premier jour du mois (1-7) :</label>
+            <input type="number" id="firstDay" name="firstDay" min="1" max="7" required>
+
+            <label for="month">Mois (1-12) :</label>
+            <input type="number" id="month" name="month" min="1" max="12" required>
+
+            <label for="year">Année :</label>
+            <input type="number" id="year" name="year" required>
+
+            <label for="size">Taille :</label>
+            <select id="size" name="size">
+                <option value="small">Petit</option>
+                <option value="medium">Moyen</option>
+                <option value="large">Grand</option>
+            </select>
+
+            <label for="headerColor">Couleur de l'en-tête :</label>
+            <input type="color" id="headerColor" name="headerColor" value="#3498db">
+
+            <label for="dayColor">Couleur des jours :</label>
+            <input type="color" id="dayColor" name="dayColor" value="#2ecc71">
+
+            <button type="submit">Générer le Calendrier</button>
+        </form>
+
+        <div id="calendar"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
